@@ -1,0 +1,3 @@
+Groceries,425.67
+Entertainment,32
+Clothing,14

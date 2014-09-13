@@ -1,0 +1,25 @@
+C:\Users\jdonahoe\AppData\Local\Temporary Projects\Envelopes\bin\Debug\Envelopes.exe.config
+N:\Classes Work\2014 fall\.NET Visual Basic\Envelopes\Envelopes\bin\Debug\Envelopes.exe.config
+N:\Classes Work\2014 fall\.NET Visual Basic\Envelopes\Envelopes\bin\Debug\Envelopes.exe
+N:\Classes Work\2014 fall\.NET Visual Basic\Envelopes\Envelopes\bin\Debug\Envelopes.pdb
+N:\Classes Work\2014 fall\.NET Visual Basic\Envelopes\Envelopes\bin\Debug\Envelopes.xml
+N:\Classes Work\2014 fall\.NET Visual Basic\Envelopes\Envelopes\obj\Debug\Envelopes.Form1.resources
+N:\Classes Work\2014 fall\.NET Visual Basic\Envelopes\Envelopes\obj\Debug\Envelopes.Resources.resources
+N:\Classes Work\2014 fall\.NET Visual Basic\Envelopes\Envelopes\obj\Debug\Envelopes.vbproj.GenerateResource.Cache
+N:\Classes Work\2014 fall\.NET Visual Basic\Envelopes\Envelopes\obj\Debug\Envelopes.exe
+N:\Classes Work\2014 fall\.NET Visual Basic\Envelopes\Envelopes\obj\Debug\Envelopes.xml
+N:\Classes Work\2014 fall\.NET Visual Basic\Envelopes\Envelopes\obj\Debug\Envelopes.pdb
+C:\Users\Jacob\Desktop\Envelopes\Envelopes\bin\Debug\Envelopes.exe.config
+C:\Users\Jacob\Desktop\Envelopes\Envelopes\obj\Debug\Envelopes.exe
+C:\Users\Jacob\Desktop\Envelopes\Envelopes\obj\Debug\Envelopes.xml
+C:\Users\Jacob\Desktop\Envelopes\Envelopes\obj\Debug\Envelopes.pdb
+C:\Users\Jacob\Desktop\projects\Envelopes\Envelopes\bin\Debug\Envelopes.exe.config
+C:\Users\Jacob\Desktop\projects\Envelopes\Envelopes\obj\Debug\Envelopes.exe
+C:\Users\Jacob\Desktop\projects\Envelopes\Envelopes\obj\Debug\Envelopes.xml
+C:\Users\Jacob\Desktop\projects\Envelopes\Envelopes\obj\Debug\Envelopes.pdb
+C:\Users\Jacob\Desktop\projects\Envelopes\Envelopes\bin\Debug\Envelopes.exe
+C:\Users\Jacob\Desktop\projects\Envelopes\Envelopes\bin\Debug\Envelopes.pdb
+C:\Users\Jacob\Desktop\projects\Envelopes\Envelopes\bin\Debug\Envelopes.xml
+C:\Users\Jacob\Desktop\projects\Envelopes\Envelopes\obj\Debug\Envelopes.Form1.resources
+C:\Users\Jacob\Desktop\projects\Envelopes\Envelopes\obj\Debug\Envelopes.Resources.resources
+C:\Users\Jacob\Desktop\projects\Envelopes\Envelopes\obj\Debug\Envelopes.vbproj.GenerateResource.Cache
