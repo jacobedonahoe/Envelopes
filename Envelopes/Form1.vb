@@ -1,6 +1,9 @@
 ﻿Imports System.IO
 
 Public Class Form1
+    Dim textToWrite As String = ""
+    Dim fileName As String = ""
+    Dim frmLog As New System.Windows.Forms.Form
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim myReader As New Microsoft.VisualBasic.FileIO.TextFieldParser("Envelopes.txt")
@@ -43,7 +46,7 @@ Public Class Form1
             envelopePanel.Width = 230
 
             Dim envelopeNameButton As New System.Windows.Forms.Button
-            AddHandler envelopeNameButton.Click, AddressOf envelopeNameButton_click
+            AddHandler envelopeNameButton.Click, AddressOf envelopeNameButton_Click
             envelopeNameButton.Name = "btn" & Envelope.name
             envelopeNameButton.Text = Envelope.name
             envelopeNameButton.Location = New Point(10, 10)
@@ -81,12 +84,41 @@ Public Class Form1
         Next
 
     End Sub
-    Protected Sub envelopeNameButton_click(sender As Object, e As EventArgs)
-        Dim frmLog As New System.Windows.Forms.Form
+    Protected Sub envelopeNameButton_Click(sender As Object, e As EventArgs)
+        fileName = sender.text & ".txt"
+        frmLog.Height = 600
+        frmLog.Width = 600
+
         Dim txtLog As New System.Windows.Forms.TextBox
-        txtLog.Text = File.ReadAllText(sender.text & ".txt")
+        txtLog.Text = File.ReadAllText(fileName)
+        txtLog.Refresh()
+        AddHandler txtLog.TextChanged, AddressOf textChangedEventHandler
+        txtLog.Height = 400
+        txtLog.Width = 500
+        txtLog.ScrollBars = ScrollBars.Both
+        txtLog.Multiline = True
+        textToWrite = txtLog.Text
+
+        Dim btnSave As New System.Windows.Forms.Button
+        AddHandler btnSave.Click, AddressOf btnSave_Click
+        btnSave.Location = New Point(250, 500)
+        btnSave.Height = 50
+        btnSave.Text = "Save"
+        btnSave.Width = 100
+
+
+
+        Dim btnExit As New System.Windows.Forms.Button
         frmLog.Controls.Add(txtLog)
+        frmLog.Controls.Add(btnSave)
         frmLog.Show()
+    End Sub
+    Private Sub textChangedEventHandler(sender As Object, e As System.EventArgs)
+        textToWrite = sender.text
+    End Sub
+    Private Sub btnSave_Click()
+        File.WriteAllText(fileName, textToWrite)
+        frmLog.Hide()
     End Sub
 
     Public Function generate(ByRef name, ByRef balance) As Envelope

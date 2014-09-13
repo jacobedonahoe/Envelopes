@@ -15,18 +15,18 @@
             mName = value
         End Set
     End Property
-    Property Balance() As String
+    Property Balance() As Integer
         Get
             Return mBalance
         End Get
-        Set(value As String)
+        Set(value As Integer)
             mBalance = value
         End Set
     End Property
-    Public Function deposit(amount As Integer)
-        Return Me.mBalance = Me.mBalance - amount
-    End Function
-    Public Function withdraw(amount As Integer)
-        Return Me.mBalance = Me.mBalance - amount
-    End Function
+    Public Sub deposit(amount As Integer)
+        Me.mBalance = Me.mBalance - amount
+    End Sub
+    Public Sub withdraw(amount As Integer)
+        Me.mBalance = Me.mBalance - amount
+    End Sub
 End Class
