@@ -2,6 +2,7 @@
 
 Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Dim myReader As New Microsoft.VisualBasic.FileIO.TextFieldParser("Envelopes.txt")
 
         myReader.TextFieldType = FileIO.FieldType.Delimited
@@ -31,11 +32,18 @@ Public Class Form1
 
             Dim envelopePanel As New System.Windows.Forms.Panel
             envelopePanel.Name = "pnl" & Envelope.name
-            envelopePanel.Location = New Point(0, envelopeCount * 70)
+            If envelopeCount < 5 Then
+                envelopePanel.Location = New Point(0, envelopeCount * 70)
+            ElseIf envelopeCount < 10 Then
+                envelopePanel.Location = New Point(230, envelopeCount * 70)
+            Else
+                envelopePanel.Location = New Point(460, envelopeCount * 70)
+            End If
             envelopePanel.Height = 70
             envelopePanel.Width = 230
 
             Dim envelopeNameButton As New System.Windows.Forms.Button
+            AddHandler envelopeNameButton.Click, AddressOf envelopeNameButton_click
             envelopeNameButton.Name = "btn" & Envelope.name
             envelopeNameButton.Text = Envelope.name
             envelopeNameButton.Location = New Point(10, 10)
@@ -73,8 +81,13 @@ Public Class Form1
         Next
 
     End Sub
-
-
+    Protected Sub envelopeNameButton_click(sender As Object, e As EventArgs)
+        Dim frmLog As New System.Windows.Forms.Form
+        Dim txtLog As New System.Windows.Forms.TextBox
+        txtLog.Text = File.ReadAllText(sender.text & ".txt")
+        frmLog.Controls.Add(txtLog)
+        frmLog.Show()
+    End Sub
 
     Public Function generate(ByRef name, ByRef balance) As Envelope
         Dim newEnvelope As New Envelope(name, balance)
